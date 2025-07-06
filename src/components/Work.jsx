@@ -265,6 +265,7 @@ const StyledWorksSection = styled.section`
   }
 `;
 
+
 const StyledWorkContent = styled.div`
   width: 100%;
   padding: 0px 30px 0;
