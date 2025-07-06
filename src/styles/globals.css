@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+/* Your existing styles */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* Add custom styles here if needed */
+.hero-gradient {
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+}
+
