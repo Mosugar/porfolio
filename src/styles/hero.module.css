@@ -2,7 +2,8 @@
 
 .hero {
   min-height: 100vh;
-  background-color: #000;
+  /* background-color: #000; */
+  background-image: 12.jpg;
   color: white;
   position: relative;
   overflow: hidden;

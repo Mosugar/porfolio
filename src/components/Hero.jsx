@@ -44,15 +44,15 @@ const Hero = () => {
             <div className={styles.orangeEdge}></div>
             <div className={styles.copyright}>©2025</div>
             <div className={styles.tagline}>
-              Designing digital experiences that captivate, connect, and convert.
+            Full-Stack Developer creating sleek, modern web apps with top-tier tech.
             </div>
           </div>
           
           <div className={styles.section}>
             <div className={styles.orangeEdge}></div>
-            <h2 className={styles.sectionTitle}>Brand</h2>
+            <h2 className={styles.sectionTitle}>Development</h2>
             <p className={styles.sectionDescription}>
-              We craft bold, memorable brand identities that tell your story and leave a lasting impression.
+            Building fast, scalable apps with React, Laravel, Python & more.
             </p>
           </div>
           
@@ -60,7 +60,7 @@ const Hero = () => {
             <div className={styles.orangeEdge}></div>
             <h2 className={styles.sectionTitle}>UI/UX</h2>
             <p className={styles.sectionDescription}>
-              Intuitive, user-focused interfaces that elevate engagement and drive seamless interactions.
+            Designing intuitive, user-first interfaces with smooth interactions.
             </p>
           </div>
         </div>
