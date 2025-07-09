@@ -79,14 +79,8 @@ const BottomNavigation = () => {
         </button>
       </div>
 
-      {/* Available Status - Top Right */}
-      {/* <div className="fixed top-8 right-8 z-50 flex items-center gap-2 px-4 py-2 bg-black/30 backdrop-blur-md border border-white/10 rounded-full">
-        <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
-        <span className="text-white text-sm font-medium">Available for work</span>
-      </div> */}
-
-      {/* Bottom Navigation - Fixed at bottom center */}
-      <nav className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50">
+      {/* Desktop Navigation - Hidden on Mobile */}
+      <nav className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 hidden lg:block">
         <div className="flex items-center gap-1 px-2 py-2 bg-black/80 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl">
           {navItems.map((item, index) => (
             <button
@@ -115,10 +109,11 @@ const BottomNavigation = () => {
         <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-orange-500 rounded-full opacity-60"></div>
       </nav>
 
-      {/* Mobile Navigation - Simplified for smaller screens */}
+      {/* Mobile Navigation - Only visible on mobile */}
       <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 lg:hidden">
-        <div className="flex items-center gap-1 px-3 py-2 bg-black/90 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl">
-          {navItems.slice(1, 5).map((item) => (
+        <div className="flex items-center gap-1 px-2 py-2 bg-black/90 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl">
+          {/* Show only essential navigation items on mobile */}
+          {navItems.filter(item => ['skills', 'services', 'experience', 'works'].includes(item.id)).map((item) => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.href, item.id)}
@@ -128,10 +123,32 @@ const BottomNavigation = () => {
                   : 'text-gray-400 hover:text-white hover:bg-white/10'
               }`}
             >
-              {item.label}
+              <span className="relative z-10">
+                {item.label === 'experience' ? 'Exp' : item.label}
+              </span>
+              
+              {/* Glow effect for active item */}
+              {activeSection === item.id && (
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg blur opacity-50"></div>
+              )}
             </button>
           ))}
         </div>
+        
+        {/* Contact floating button for mobile */}
+        <button
+          onClick={() => scrollToSection('#contact', 'contact')}
+          className={`absolute -top-12 right-0 w-10 h-10 rounded-full transition-all duration-300 ${
+            activeSection === 'contact'
+              ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white'
+              : 'bg-white/10 text-gray-400 hover:bg-white/20 hover:text-white'
+          } backdrop-blur-xl border border-white/20 flex items-center justify-center`}
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </button>
       </nav>
     </>
   );

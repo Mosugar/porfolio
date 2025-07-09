@@ -6,31 +6,39 @@ import Work from './components/Work.jsx';
 import Services from './components/Services.jsx';
 import GlobalBackground from './components/Layout.jsx';
 import ExperienceHistory from './components/ExperienceHistory.jsx';
-import CyberpunkNavigation from './components/CyberpunkNavigation.jsx'; // Add this import
+import CyberpunkNavigation from './components/CyberpunkNavigation.jsx';
 
 function App() {
   return (
     <>
       <GlobalBackground>
-        <CyberpunkNavigation /> {/* Add the navigation component */}
+        {/* Single Navigation Component - handles both desktop and mobile */}
+        <CyberpunkNavigation />
+        
         <div id="home">
           <Hero />
         </div>
+        
         <div id="skills">
           <Skills />
         </div>
+        
         <div id="services">
           <Services />
         </div>
+        
         <div id="experience">
           <ExperienceHistory/>
         </div>
+        
         <div id="works">
           <Work />
         </div>
+        
         <div id="contact">
           <Footer />
         </div>
+        
         <MatrixRain />
       </GlobalBackground>
     </>
