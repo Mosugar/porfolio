@@ -3,10 +3,13 @@
 .hero {
   min-height: 100vh;
   /* background-color: #000; */
-  background-image: 12.jpg;
+  background-image: url('/img/quck.jpg');
+  background-position: 10% 20%;
+  background-size: cover;
   color: white;
   position: relative;
   overflow: hidden;
+  z-index: 49;
 }
 
 .backgroundDistortion {

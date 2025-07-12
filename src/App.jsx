@@ -53,6 +53,8 @@ function App() {
         <div id="home">
           <Hero />
         </div>
+
+        <MatrixRain />
         
         <div id="about">
           <About />
@@ -81,7 +83,7 @@ function App() {
           <Footer />
         </div>
         
-        <MatrixRain />
+        
       </GlobalBackground>
 
       <style jsx>{`

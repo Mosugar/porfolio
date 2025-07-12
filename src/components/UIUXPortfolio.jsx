@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Eye, ExternalLink, Figma, Palette, Sparkles, Target, Users, ArrowRight } from 'lucide-react';
+import { Eye, ExternalLink, Figma, Palette, Sparkles, ArrowRight } from 'lucide-react';
 import CyberpunkTitle from './CyberpunkTitle';
 
 const UIUXPortfolio = () => {
@@ -268,33 +268,6 @@ const UIUXPortfolio = () => {
                 Explore all {uiUxProjects.length}+ design projects on Behance
               </p>
             </div>
-          </div>
-        </div>
-
-        {/* Stats Section */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <Target className="w-8 h-8 text-orange-400" />
-            </div>
-            <h4 className="text-2xl font-bold text-white mb-2">6+</h4>
-            <p className="text-gray-400">UI/UX Projects</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <Users className="w-8 h-8 text-orange-400" />
-            </div>
-            <h4 className="text-2xl font-bold text-white mb-2">50+</h4>
-            <p className="text-gray-400">User Interviews</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <Sparkles className="w-8 h-8 text-orange-400" />
-            </div>
-            <h4 className="text-2xl font-bold text-white mb-2">95%</h4>
-            <p className="text-gray-400">Client Satisfaction</p>
           </div>
         </div>
       </div>

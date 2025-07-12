@@ -39,7 +39,7 @@ const Hero = () => {
         </div>
         
         {/* Three column grid: Copyright/Tagline, Brand, UI/UX */}
-        <div className={styles.sectionsGrid}>
+        {/* <div className={styles.sectionsGrid}>
           <div className={styles.copyrightSection}>
             <div className={styles.orangeEdge}></div>
             <div className={styles.copyright}>©2025</div>
@@ -63,7 +63,7 @@ const Hero = () => {
             Designing intuitive, user-first interfaces with smooth interactions.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Ambient lighting effects */}
